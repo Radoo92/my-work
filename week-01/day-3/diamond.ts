@@ -1,3 +1,5 @@
+{
+
 `use strict`;
 
 const lineCount = 4;
@@ -19,3 +21,5 @@ for (let i: number = lineCount; i >= 0; i--)
   console.log(space, star);
   space += ' ';
   star = star.slice(0, -2);
+
+}

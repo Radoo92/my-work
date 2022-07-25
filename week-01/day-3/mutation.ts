@@ -1,3 +1,5 @@
+{
+
 'use strict';
 
 // make bigger 
@@ -82,4 +84,6 @@ if ((j % 3 == 0) && (j % 5 == 0)) {
 if (0 == 0) {
    console.log("pravda");
     
+}
+
 }

@@ -19,15 +19,15 @@ h1, h2, h3 {
 }
 
 nav {
-    background-color: orange;
+    background-color: black;
     text-align: left;
     padding-left: 15%;
-    border: 1px solid white;
+    border: 1px outset white;
     color: black;
 }
 
 a {
-    color: black;
+    color: orange;
 }
 
 div {
@@ -37,6 +37,7 @@ div {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 5%;
+    background-color: rgb(35, 50, 60);
 }
 
 
