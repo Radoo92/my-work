@@ -2,11 +2,11 @@
 
 {
 
-let lineCount: number = 6;
-let string = "";
+let lineCount: number = 6; //row or column count
+let string = ""; 
 
-for (let i = 0; i < lineCount; i++) {
-  for (let j = 0; j < lineCount; j++) {
+for (let i = 0; i < lineCount; i++) { //external loop
+  for (let j = 0; j < lineCount; j++) { // internal loop
    if (i === 0 || i === lineCount -1) {
       string += "%";
    }
@@ -19,7 +19,7 @@ for (let i = 0; i < lineCount; i++) {
       }
    }
   }
-
+  
   string += "\n";
     
 }
