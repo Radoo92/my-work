@@ -2,6 +2,7 @@
 
 // operation numbers
 
+{
 var added = 13 + 22;
 console.log(added);
 
@@ -16,4 +17,6 @@ console.log(divided);
 
  var result = divided
  console.log(result);
+
+ }
  
