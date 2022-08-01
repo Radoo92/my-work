@@ -1,25 +1,31 @@
-{
-
 `use strict`;
-
-const lineCount = 4;
-let star = `*`;
-let space = ` `;
-
-for (let i = 1; i <= lineCount; i++) {
-  for (let j: number = lineCount - i; j >= 0; j--) {
-    space += ` `;
+{
+let n = 5;
+let string = "";
+// Upside pyramid
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = n; j > i; j--) {
+    string += " ";
   }
-  console.log(space, star);
-  space = ' ';
-  star += `**`;
+  // printing star
+  for (let k = 0; k < i * 2 - 1; k++) {
+    string += "*";
+  }
+  string += "\n";
 }
-for (let i: number = lineCount; i >= 0; i--) 
-  for (let j: number = lineCount + i; j <= 0; j++) {
-    space += ` `;
+// downside pyramid
+for (let i = 1; i <= n - 1; i++) {
+  // printing spaces
+  for (let j = 0; j < i; j++) {
+    string += " ";
   }
-  console.log(space, star);
-  space += ' ';
-  star = star.slice(0, -2);
+  // printing star
+  for (let k = (n - i) * 2 - 1; k > 0; k--) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
 
 }
