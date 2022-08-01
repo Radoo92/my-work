@@ -1,9 +1,9 @@
 'use strict';
 
-{
+export { };
 
-    var size = 8,
-        chess = "";
+    let size = 8;
+    let chess = "";
 
     for (var i = 0; i < size; i++) {
         for (var j = 0; j < size; j++) {
@@ -14,4 +14,3 @@
 
     console.log(chess);
 
-}
