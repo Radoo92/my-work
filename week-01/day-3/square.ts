@@ -1,34 +1,23 @@
 'use strict';
 
-{
+export {}
 
-let lineCount: number = 6; //row or column count
-let string = ""; 
 
-for (let i = 0; i < lineCount; i++) { //external loop
-  for (let j = 0; j < lineCount; j++) { // internal loop
-   if (i === 0 || i === lineCount -1) {
-      string += "%";
-   }
-   else{
-      if(j === 0 || j === lineCount - 1) {
-         string += "%";
-      }
-      else {
-         string += " ";
-      }
-   }
-  }
-  
-  string += "\n";
-    
+let lineCount: number = 6;
+
+let row1: string = "";
+for (let i: number = 0; i < lineCount; i++) {
+   row1 += "%";
 }
 
-console.log(string);
-
-
+let row2: string = "";
+for (let k: number = 0; k < lineCount - 2; k++) {
+   row2 += " ";
 }
+row2 = "%" + row2 + "%";
 
-
-
-
+console.log(row1);
+for (let n: number = 0; n < lineCount - 2; n++) {
+   console.log(row2);
+}
+console.log(row1);
