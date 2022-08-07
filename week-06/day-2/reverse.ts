@@ -13,16 +13,3 @@ function reverse() {
 }
 
 reverse();
-
-
-
-
-
-
-
-
-  
-
-
-
-
