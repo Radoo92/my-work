@@ -42,3 +42,5 @@ map.clear()
 
 //Print how many key-value pairs are in the map
 console.log(map.size);
+
+export {};
