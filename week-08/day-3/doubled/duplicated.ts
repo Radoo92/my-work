@@ -6,21 +6,26 @@ const fs = require('fs');
 let content: string = "";
 let fileName: string = 'duplicated-chars.txt';
 
-try {
+try{
     content = fs.readFileSync(fileName, 'utf8');
-} catch (Error) {
+} catch (Error){
     console.log('cannot read file');
     process.exit();
 }
 
-function reversed(toBeReversed: string) {
-    let content: string = ""
-    for (let i = toBeReversed.length - 1; i > - 0; i--) {
-        content += toBeReversed[i];
+function decrypt(fileName: string) : string{
+    let newContent: string = content.charAt(0);
+    let lastNewChar = content.charAt(0);
+    for(let i: number = 1; i < content.length; i++){
+        let nextChar = content.charAt(i);
+        if(lastNewChar !== nextChar){
+            newContent += nextChar;
+            lastNewChar = nextChar; 
+        }
     }
-    return content
+    return newContent;
 }
 
-console.log(reversed(content));
+console.log(decrypt(fileName));
 
-export {};
+export { };
