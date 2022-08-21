@@ -19,6 +19,4 @@ for (let i = canvas.height -20; i > 0; i -= 20){
     drawLine(canvas.width, i, i, 0, "purple");
 }
 
-
-
 export {};
