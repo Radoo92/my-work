@@ -5,25 +5,21 @@
 // It should return zero if it can't open the file, and
 // should not raise any error.
 
-function countLines(fileName: string){
-    const fs = require('fs');
+'use strict';
+
+import * as fs from 'fs';
+
+function countLines(fileName: string): number {
     
-    let content: string = "";
+    let fileLines: string = '';
     
     try {
-        content = fs.readFileSync(fileName, 'utf8');
+        let fileLines = fs.readFileSync(fileName, 'utf-8').split('\n');
+        return fileLines.length;
+    } catch (err) {
+        return 0;
     }
-    catch (error) {
-        console.log('0');
-        process.exit();
-    }
-    for (var i = 0; i < fileName.length; ++i) {
-        if (fileName[i] == '\n') {
-            length++;
-        }
-    }
-    return length;
 }
+console.log(countLines('my-file.txt'))
 
-console.log(countLines("test.txt"));
-
+export {};

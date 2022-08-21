@@ -19,3 +19,5 @@ function divide(num: number){
 divide(10);
 divide(0);
 
+export {};
+

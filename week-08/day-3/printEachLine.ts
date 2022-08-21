@@ -19,3 +19,5 @@ try {
 fs.eachLine('my-file.txt', function (line: any) {
     console.log(line);
 });
+
+export {};
