@@ -34,5 +34,4 @@ function initializePokemon(): Pokemon[] {
         new Pokemon('Balbasaur', 'water', 'fire'),
         new Pokemon('Kingler', 'water', 'fire')
     ];
-
 }
