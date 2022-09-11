@@ -1,34 +1,32 @@
-'use strict';
-/*Create a Sharpie class
-We should know the followings about each sharpie:
-color (which should be a string),
-width (which will be a number) and the
-inkAmount (another number)
-We need to specify the color and the width at creation
-Every sharpie is created with a default inkAmount value: 100
-We can use() the sharpie objects: using it decreases inkAmount by 10*/
+'use strict'
+
+// Create Sharpie class
+//   We should know about each sharpie their color (which should be a string), width (which will be a floating point number),
+//   inkAmount (another floating point number)
+//   When creating one, we need to specify the color and the width
+//   Every sharpie is created with a default 100 as inkAmount
+//   We can use() the sharpie objects
+//   which decreases inkAmount
 
 class Sharpie {
-    private _color: string;
-    private _width: number;
-    private _inkAmount: number;
+    color: string;
+    width: number;
+    inkAmount: number = 100;
 
-    constructor(color: string, width: number, inkAmount: number = 100) {
-        this._color= color;
-        this._width = width;
-        this._inkAmount = inkAmount;
+    constructor(color: string, width: number) {
+        this.color = color
+        this.width = width
     }
 
-    public use(): void {
-        this._inkAmount -= 10;
+    use() {
+        this.inkAmount--
     }
 
 }
 
-let sharpie1 = new Sharpie("red", 10)
+let sharpie1 = new Sharpie("red", 25.2)
+console.log(`Sharpie color is: ${sharpie1.color}, width is: ${sharpie1.width} and inkAmount is ${sharpie1.inkAmount}`)
+sharpie1.use()
+console.log(`Sharpie color is: ${sharpie1.color}, width is: ${sharpie1.width} and inkAmount is ${sharpie1.inkAmount}`)
 
-sharpie1.use();
-
-console.log(sharpie1);
-
-export {};
+export { };
