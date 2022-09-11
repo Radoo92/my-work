@@ -9,4 +9,3 @@ function adder(n: number): number {
 }
 
 console.log(adder(5));
-
