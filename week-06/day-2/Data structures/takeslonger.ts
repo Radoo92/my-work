@@ -1,8 +1,13 @@
 'use strict';
 
-export {};
-//Insert the words "always takes longer than"
-let quote: string = `Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.`;
-let quotefix = quote.slice(0, 20) + " always takes longer than" + quote.slice(20);
+export { };
+// While saving this quote, a disk error has occured. Please fix it!
+// Insert the words "always takes longer than" between the words "It" and "you"!
 
-  console.log(quotefix); 
+let quote: string = `Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.`;
+let plusString: String = "always takes longer than";
+
+let quoteArray = quote.split(" ");
+quote = quoteArray.slice(0, 3).join(" ") + " " + plusString + " " + quoteArray.slice(3).join(" ");
+
+console.log(quote);
