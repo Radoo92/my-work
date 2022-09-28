@@ -9,10 +9,11 @@ export { };
 
 let planetList: string[] = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Uranus', 'Neptune'];
 
-planetList.splice(5, 0, "Saturn");
-
-function putSaturn(list: string[]): any {
-    return list;
+function putSaturn(arr: any) {
+    arr.splice(planetList.indexOf("Jupiter") + 1, 0, "Saturn")
+    return arr
 }
 
 console.log(putSaturn(planetList));
+
+export = putSaturn;
