@@ -16,9 +16,9 @@ let hashmap: any = {
 
 for (let i = 0; i < notSoCrypticMessage.length; i++) {
     let value = notSoCrypticMessage[i];
-    out += hashmap[value];
+    out += hashmap[notSoCrypticMessage[i]];
 }
 
 console.log(out)
 
-export {};
+export { };
