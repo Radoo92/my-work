@@ -1,12 +1,12 @@
 'use strict';
 
-export {};
+export { };
 
 //Create a list ('List A')
 let listA: string[] = ["Apple", "Avocado", "Blueberries", "Durian", "Lychee"];
 
 //Create a new list('List B') with the values of List A
-let listB: string[] = [...listA];
+let listB: string[] = [...listA]
 
 //Print out whether List A contains "Durian" or not
 console.log(listA.includes("Durian"));
@@ -33,10 +33,7 @@ listB.push("Passion Fruit", "Pomelo");
 console.log(listA[2]);
 
 //Print all elements of List A    
-listA.forEach(function (print) {
-    console.log(print) ;
-    
-})
+console.log(listA);
 
 //Print all elements of List B
 console.log(listB);
