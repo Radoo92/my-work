@@ -26,4 +26,4 @@ function writeMultiple(path: string, word: string, number: number) {
     }
 }
 
-writeMultiple("C:\Users\Radko\Radoo92\apple.txt'", "apple", 5);
+writeMultiple("C:\\Users\\Radko\\Radoo92\\apple.txt", "apple", 5);
