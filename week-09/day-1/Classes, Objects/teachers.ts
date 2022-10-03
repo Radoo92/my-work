@@ -14,14 +14,14 @@ class Student {
     learn() {
         console.log("the student is actually learning");
     }
-    question(Teacher: any) {
-        Teacher.answer()
+    question(teacher: Teacher) {
+        teacher.answer()
     }
 }
 
 class Teacher {
-    teach(Student: any) {
-        Student.learn()
+    teach(student: Student) {
+        student.learn()
     }
     answer() {
         console.log("The teacher is answering a question");
