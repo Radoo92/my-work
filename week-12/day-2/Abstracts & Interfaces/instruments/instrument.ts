@@ -5,10 +5,7 @@
 //  it should provide a play() method.
 
 export abstract class Instrument {
-    protected abstract name: string;
-
-    play() {
-    }
+    abstract play(): void
 }
 
 // Next, we add another abstract class, StringedInstrument which extends Instrument. It
@@ -18,15 +15,8 @@ export abstract class Instrument {
 
 export abstract class StringedInstrument extends Instrument {
     abstract numberOfString: number;
-    abstract soundOfInstrument: string;
 
-    sound() {
-        return this.soundOfInstrument
-    }
-
-    play() {
-        console.log(`${this.name}, a ${this.numberOfString}-stringed instrument that goes ${this.sound()}`)
-    }
+    abstract sound(): string;
 }
 
 // StingedInstrument has 3 descendants, namely:-
@@ -37,38 +27,49 @@ export abstract class StringedInstrument extends Instrument {
 // The Workshop should be invoked from another file like app.ts or main.ts
 
 export class ElectricGuitar extends StringedInstrument {
-    soundOfInstrument: string;
-    name: string;
     numberOfString: number;
 
     constructor(pNumberOfString: number = 6) {
         super()
         this.numberOfString = pNumberOfString
-        this.name = "Electric Guitar"
-        this.soundOfInstrument = "Twang"
+    }
+
+    sound(): string {
+        return "Twang";
+    }
+
+    play() {
+        console.log(`"Electric Guitar", a ${this.numberOfString}-stringed instrument that goes ${this.sound()}`)
     }
 }
 export class BassGuitar extends StringedInstrument {
-    soundOfInstrument: string;
-    name: string;
     numberOfString: number;
 
     constructor(pNumberOfString: number = 4) {
         super()
         this.numberOfString = pNumberOfString
-        this.name = "Bass Guitar"
-        this.soundOfInstrument = "Duum-duum-duum"
+    }
+    sound(): string {
+        return "Duum-duum-duum"
+    }
+
+    play() {
+        console.log(`"Bass Guitar", a ${this.numberOfString}-stringed instrument that goes ${this.sound()}`)
     }
 }
 export class Violin extends StringedInstrument {
-    soundOfInstrument: string;
-    name: string;
     numberOfString: number;
 
     constructor(pNumberOfString: number = 4) {
         super()
         this.numberOfString = pNumberOfString
-        this.name = "Violin"
-        this.soundOfInstrument = "Screech"
+
+    }
+    sound(): string {
+        return "Screech";
+    }
+
+    play() {
+        console.log(`"Violin", a ${this.numberOfString}-stringed instrument that goes ${this.sound()}`)
     }
 }

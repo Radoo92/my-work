@@ -24,7 +24,9 @@ export class Garden {
         console.log(`Watering with ${amount}`)
         let size = 0
         for (let plant of this.plants) {
-            plant.isNeedWater ? size++ : '';
+            if (plant.isNeedWater) {
+                size++
+            }
         }
         for (let plant of this.plants) {
             plant.watering(amount / size);

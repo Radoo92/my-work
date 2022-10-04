@@ -1,30 +1,27 @@
 'use strict';
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+const ctx = canvas.getContext('2d');
 
-//// Draw four different size and color rectangles
-function drawRect(x: number, y:number, w: number, h: number, color: string): void
-{
-    ctx.beginPath();
-    ctx.fillStyle = color;
-    ctx.rect(x, y, w, h);
-    ctx.fill();
+// DO NOT TOUCH THE CODE ABOVE THIS LINE
+
+// Draw four different size and color rectangles.
+// Avoid code duplication.
+
+
+function rect(x: any, y: any, a: any, b: any) {
+    ctx?.beginPath();
+    ctx?.fillRect(x, y, a, b);
+
+    ctx?.stroke();
 }
+let colors = ["blue", "red", "green", "purple"]
 
-let numOfRect = 3;
-let colors: string[] = ["red", "blue", "brown", "green", "yellow", "pink",];
-for (let i = 0; i < numOfRect; i++) {
-    let maxSize = canvas.width/4;
-    let maxCoordinate = canvas.width-maxSize;
-    let coordinateX = Math.random()*maxCoordinate;
-    let coordinateY = Math.random()*maxCoordinate;
-    let randomSize = Math.random()*maxSize;
-    let colorIndex = Math.floor(Math.random()*colors.length);
-    let randomcolor = colors[colorIndex];
 
-    drawRect(coordinateX, coordinateY, randomSize, randomSize, randomcolor)
-   
+
+for (let i = 1; i < 5; i++) {
+    if (ctx) {
+        ctx.fillStyle = colors[i - 1];
+        rect(i * 100, i * 50, i * 20, i * 20)
+    }
 }
-
-export {};
