@@ -1,16 +1,24 @@
-{
+export { };
 
 'use strict';
 
+// Write a program that draws a triangle like this:
+//
+// *
+// **
+// ***
+// ****
+//
+// The triangle should have as many lines as lineCount is/
+
 let lineCount: number = 4;
 
-let star = "*"
-let space = " "
-
-for (let i = 1; i <= lineCount; i++) {
-    space += star
-    console.log(space);
-    
+function drawTriangle(lineCount: number) {
+    let line = "";
+    for (let i = 0; i < lineCount; i++) {
+        line += "*";
+        console.log(line);
+    }
 }
 
-}
+drawTriangle(4);
